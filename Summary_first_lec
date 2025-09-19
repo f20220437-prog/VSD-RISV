@@ -1,0 +1,9 @@
+In the first lecturer sir explained about The SOC how is made aand explained the various step taken to get a chip made into a physical board first we start with Chip modelling in which the Application is a Testbench In C language (for example)
+we run it a specs model which gives us result (O1) and in GCC which gives result(O1) seperately and check if O1=O0 and move to SOC design Flow in which we create a softcopy of hardware i.e using RTL (Verilog or any other HDL) and then execute the Application through it form which get a result as 
+(O2) then we check for if O2=O1 
+. Now the Softcopy gest divided into two parts Processor and Peripherals/IP's which can also be called ASIC layer then we move to synthesis stage where from Processor design we syntesis a Gate leve Netlist. From Peripherals/IP's we extract majorly Syntesizable 
+Macros(Reusable blocks for various tasks) and Analog IP's can be functional only no need for Systhesizablity.
+from all these we again run SOC Integration in Environments called GPIO's and get (O3) we check if O3=O2 and
+ last steps we basically have RTL2GDS then GDS-II then DRC /LVS checks then we have a process called TApeout which is the Design goes fro Producation and we recieve a PHYSICAL chip called as Tape in .
+finally with use of all other necessary periplherals and our chips we finally get a result called as O4 .
+we finally check If O0=O1= O2= O3=O4 and if yes we say our design Silicon Valid. The chip we arer going to design works in Range of 100 to 130 MHz useful in Plces like iwatches,arduino Boards, TV panels ,AC applications.
